@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: -apple-system;
+    font-weight: 300;
+
+    text-align: center;
+}
+
+.player {
+    display: table-cell;
+    float: left;
+    width: 50%;
+    height: 50%;
+
+    line-height: 300px;
+    vertical-align: middle;
+
+    font-size: 150px;
+}
+
+.pause {
+    width: 150px;
+    height: 150px;
+
+    background-color: #fff;
+    color: #555;
+
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -75px;
+    margin-top: -75px;
+
+    font-size: 120px;
+}
+
+.active {
+    background-color: #60A589;
+    color: #fff;
+}
