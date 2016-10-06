@@ -43,6 +43,7 @@ body {
     left: 50%;
     margin-left: -75px;
     margin-top: -75px;
+    z-index: 2;
 
     font-size: 120px;
 }
@@ -50,4 +51,8 @@ body {
 .active {
     background-color: #60A589;
     color: #fff;
+}
+
+.upside-down {
+    transform: rotate(180deg);
 }

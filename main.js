@@ -13,5 +13,5 @@ $('.player').click(function(){
 
 $('.pause').click(() => {
     $('.player').removeClass('active').stopwatch('stop');
-    $(this).addClass('active');
+    $('.pause').addClass('active');
 })
