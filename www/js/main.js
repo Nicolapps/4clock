@@ -1,4 +1,5 @@
-var paused = false;
+var paused = true,
+    didTimerStart = false
 
 $('.player').stopwatch({
     format: '{MM}:{ss}'
@@ -6,6 +7,12 @@ $('.player').stopwatch({
 
 $('.player').click(function(){
     $('.player, .pause').removeClass('active')
+
+    $('.pause').text('▌▌').removeClass('delete')
+    paused = false
+
+    didTimerStart = true
+
     $('.player').stopwatch('stop')
 
     $(this).addClass('active')
@@ -13,18 +20,22 @@ $('.player').click(function(){
 })
 
 $('.pause').click(function(){
-    if(!paused) {
-        paused = true
+    if(!paused) { // Pause timer
 
-        $('.pause').text('✖').addClass('delete')
+        if(didTimerStart){
+            paused = true
 
-        $('.player').removeClass('active').stopwatch('stop')
-        $('.pause').addClass('active')
+            $('.pause').text('✕').addClass('delete')
 
-    } else {
+            $('.player').removeClass('active').stopwatch('stop')
+            $('.pause').addClass('active')
+        }
+        
+    } else { // Reset timer
 
         $('.player').stopwatch('reset').text('00:00')
-        paused = false;
+        paused = true
+        didTimerStart = false
         $('.pause').text('▌▌').removeClass('delete')
 
     }
