@@ -53,6 +53,12 @@ body {
     line-height: 2.5;
 }
 
+.delete {
+    font-size: 10vw;
+    line-height: 1.5;
+    padding-left: 0.4vw;
+}
+
 .active {
     background-color: #60A589;
     color: #fff;
