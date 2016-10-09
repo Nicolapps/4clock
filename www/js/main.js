@@ -1,4 +1,3 @@
-
 $('.player').stopwatch({
     format: '{MM}:{ss}'
 }).stopwatch('start').stopwatch('stop')
@@ -11,7 +10,7 @@ $('.player').click(function(){
     $(this).stopwatch('toggle')
 })
 
-$('.pause').click(() => {
+$('.pause').click(function(){
     $('.player').removeClass('active').stopwatch('stop');
     $('.pause').addClass('active');
 })
